@@ -1,0 +1,1 @@
+.Time{display:flex;gap:1rem}.Time *{font-size:6vw}.day{display:flex;flex-direction:column;align-items:center}.day p,.clock p{margin-top:0;opacity:.75;font-size:4vw}.clock{display:flex;flex-direction:column;align-items:center}.containerTime{background:var(--main-container-color);border-radius:20px;padding:1rem;font-weight:inherit}
