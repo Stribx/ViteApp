@@ -1,0 +1,31 @@
+@import "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;400&display=swap";
+:root {
+  font-family: "Hanken Grotesk", sans-serif;
+  line-height: 0;
+  --main-text-color: rgba(255, 255, 255, 0.87);
+  --main-container-color: rgba(0, 0, 0, 0.6);
+  --accent-color: #4b61a6;
+  --main-color: #000;
+  color-scheme: light dark;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--main-text-color);
+  background: linear-gradient(45deg, #142b59 0%, #f299a9 100%);
+}
+body.lightMode {
+  --main-container-color: rgba(255, 255, 255, 0.6);
+  --main-text-color: #000;
+  --main-color: #f5f5f5;
+}
+a {
+  text-decoration: inherit;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-container-color: rgba(255, 255, 255, 0.6);
+    --main-text-color: #000;
+  }
+}
