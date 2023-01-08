@@ -55,7 +55,7 @@ function App() {
           <Routes key={location.pathname} location={location}>
             <Route path="/" element={<Navbar />}>
               <Route
-                path="/"
+                path="/ViteApp/"
                 element={
                   <AnimationPage>
                     <Home />
@@ -63,7 +63,7 @@ function App() {
                 }
               />
               <Route
-                path="/weather"
+                path="/ViteApp/weather"
                 element={
                   <AnimationPage>
                     <Weather />
@@ -71,7 +71,7 @@ function App() {
                 }
               />
               <Route
-                path="/calculator"
+                path="/ViteApp/calculator"
                 element={
                   <AnimationPage>
                     <Calculator />
@@ -79,7 +79,7 @@ function App() {
                 }
               />
               <Route
-                path="/note"
+                path="/ViteApp/note"
                 element={
                   <AnimationPage>
                     <Note />
@@ -87,7 +87,7 @@ function App() {
                 }
               />
               <Route
-                path="/settings"
+                path="/ViteApp/settings"
                 element={
                   <AnimationPage>
                     <Settings

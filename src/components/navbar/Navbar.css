@@ -1,4 +1,22 @@
-.Navbar{display:flex;flex-direction:column;font-size:4rem;height:90vh;justify-content:space-around;background:var(--main-container-color);border-radius:0 20px 20px 0}
-.Navbar a{border-radius:50%;color:var(--main-text-color);padding:1rem;transition:all .75s;scale:.9}
-.Navbar a:hover{scale:1}
-.Navbar a.active{color:var(--main-text-color);background:var(--main-container-color)}
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  justify-content: space-around;
+  background: var(--main-container-color);
+  border-radius: 0 20px 20px 0;
+}
+.Navbar a {
+  border-radius: 50%;
+  color: var(--main-text-color);
+  padding: 1rem;
+  transition: all 0.75s;
+  scale: 0.9;
+}
+.Navbar a:hover {
+  scale: 1;
+}
+.Navbar a.active {
+  color: var(--main-text-color);
+  background: var(--main-container-color);
+}

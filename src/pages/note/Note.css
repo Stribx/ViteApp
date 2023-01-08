@@ -1,8 +1,9 @@
 .Note {
   display: flex;
-  min-height: 85vh;
+  height: 85vh;
   width: 100%;
   justify-content: center;
+  align-items: center;
   line-height: 0;
 }
 .Form {
@@ -54,7 +55,7 @@
   gap: 1rem;
   padding: 1rem;
   width: 90%;
-  min-height: -webkit-fill-available;
+  height: 70%;
   border-radius: 20px;
 }
 .containerNote #allNote {
