@@ -1,4 +1,4 @@
-import React, { lazy, useState, useEffect } from "react";
+import { lazy, useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { motion, AnimatePresence } from "framer-motion";
