@@ -15,26 +15,15 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const listener = () => {
-      if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-        setIsDarkMode(true);
-      } else {
-        setIsDarkMode(false);
-      }
-    };
-    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", listener);
-    return () => {
-      window.matchMedia("(prefers-color-scheme: light)").removeEventListener("change", listener);
-    };
-  }, []);  
-  
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      setIsDarkMode(true);
+    } else {
+      setIsDarkMode(false);
+    }
+  }, []);
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("lightMode");
-    } else {
-      document.body.classList.remove("lightMode");
-    }
+    document.body.classList.toggle("lightMode", isDarkMode);
   }, [isDarkMode]);
 
   return (
