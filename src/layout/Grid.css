@@ -1,0 +1,18 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 60px);
+    place-items: center;
+    width: 100%;
+}
+.grid button{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 22px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    background: var(--main-container-color);
+    color: var(--main-text-color);
+}

@@ -1,18 +1,23 @@
 import { memo } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-const Button = memo(({ onClick, value, style, text }) => {
+const Button = memo(({ onClick, value, style, text, whileTap }) => {
   return (
-    <motion.button
-      className="custom-button"
-      whileHover={{ backgroundColor: "var(--accent-color)", filter: "brightness(0.8)" }}
-      whileTap={{ scale: 0.9, backgroundColor: "var(--main-text-color)" }}
-      onClick={onClick}
-      value={value}
-      style={style}
-    >
-      {text}
-    </motion.button>
+    <AnimatePresence>
+      <motion.button
+        className="custom-button"
+        whileHover={{
+          backgroundColor: "var(--accent-color)",
+          filter: "brightness(0.8)",
+        }}
+        whileTap={whileTap}
+        onClick={onClick}
+        value={value}
+        style={style}
+      >
+        {text}
+      </motion.button>
+    </AnimatePresence>
   );
 });
 
