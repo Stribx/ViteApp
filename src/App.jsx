@@ -11,6 +11,7 @@ const Calculator = lazy(() => import("./pages/calculator/Calculator"));
 const Settings = lazy(() => import("./pages/settings/Settings"));
 
 function App() {
+  const [isAnimate, setIsAnimate] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
 
@@ -30,12 +31,12 @@ function App() {
     <AnimatePresence mode="wait">
       <motion.div
         animate={{
-          background: [
-            "linear-gradient(45deg,#142b59 0%,#f299a9 100%)",
-            "linear-gradient(45deg,#f299a9 0%,#142b59 100%)",
-            "linear-gradient(45deg,#142b59 0%,#142b59 100%)",
-            "linear-gradient(45deg,#142b59 0%,#f299a9 100%)",
-          ],
+                background: isAnimate ? [
+                  "linear-gradient(45deg,#142b59 0%,#f299a9 100%)",
+                  "linear-gradient(45deg,#f299a9 0%,#142b59 100%)",
+                  "linear-gradient(45deg,#142b59 0%,#142b59 100%)",
+                  "linear-gradient(45deg,#142b59 0%,#f299a9 100%)",
+                ]:[],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
         className="App"
@@ -82,6 +83,8 @@ function App() {
                     <Settings
                       isDarkMode={isDarkMode}
                       setIsDarkMode={setIsDarkMode}
+                      isAnimate={isAnimate}
+                      setIsAnimate={setIsAnimate}
                     />
                   </AnimationPage>
                 }

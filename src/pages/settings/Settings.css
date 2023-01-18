@@ -6,7 +6,6 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    width: 100px;
 }
 .Settings .mode{
     display: flex;
@@ -20,4 +19,13 @@
     font-size: 4rem;
     padding: 1rem;
     color: var(--main-text-color);
+}
+.Settings .checkbox{
+    background: var(--main-container-color);
+    border-radius: 5px;
+    width: 100%;
+}
+.Settings input[type='checkbox']{
+    height: 32px;
+    width: 32px;
 }
